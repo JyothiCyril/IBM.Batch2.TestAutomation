@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Test Automation Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="com.qa.utility.Reporting"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Functional Test- PopUp(failed)">
+    <parameter name="Url" value="http://register.rediff.com/register/register.php?FormName=user_details"/>
+    <parameter name="Browser" value="Chrome"/>
+    <classes>
+      <class name="com.qa.testscripts.TC_WorkingWithPopUp_001">
+        <methods>
+          <include name="popupsEx"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.qa.testscripts.TC_WorkingWithPopUp_001 -->
+    </classes>
+  </test> <!-- Functional Test- PopUp(failed) -->
+</suite> <!-- Failed suite [Test Automation Suite] -->

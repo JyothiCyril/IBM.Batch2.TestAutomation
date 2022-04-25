@@ -1,0 +1,330 @@
+<html>
+<head>
+<title>TestNG:  Functional Test-Frames</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Functional Test-Frames</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>3/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 20 09:32:37 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>13 seconds (13209 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.qa.testscripts.TC_WorkingWithFrames_001.frameByIndex()'><b>frameByIndex</b><br>Test class: com.qa.testscripts.TC_WorkingWithFrames_001<br/>
+<a href="#Output-1537792427" onClick='toggleBox("Output-1537792427", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1537792427" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1537792427">
+Overview (Java Platform SE 7 )<br/>
+Overview (Java Platform SE 7 )<br/>
+Overview (Java Platform SE 7 )<br/>
+</div>
+</td>
+<td></td>
+<td>1</td>
+<td>com.qa.testscripts.TC_WorkingWithFrames_001@5acf93bb</td></tr>
+<tr>
+<td title='com.qa.testscripts.TC_WorkingWithFrames_001.frameByElement()'><b>frameByElement</b><br>Test class: com.qa.testscripts.TC_WorkingWithFrames_001<br/>
+<a href="#Output-170683512" onClick='toggleBox("Output-170683512", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-170683512" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-170683512">
+Any (Java Platform SE 7 )<br/>
+All Classes<br/>
+java.applet<br/>
+java.awt<br/>
+java.awt.color<br/>
+java.awt.datatransfer<br/>
+java.awt.dnd<br/>
+java.awt.event<br/>
+java.awt.font<br/>
+java.awt.geom<br/>
+java.awt.im<br/>
+java.awt.im.spi<br/>
+java.awt.image<br/>
+java.awt.image.renderable<br/>
+java.awt.print<br/>
+java.beans<br/>
+java.beans.beancontext<br/>
+java.io<br/>
+java.lang<br/>
+java.lang.annotation<br/>
+java.lang.instrument<br/>
+java.lang.invoke<br/>
+java.lang.management<br/>
+java.lang.ref<br/>
+java.lang.reflect<br/>
+java.math<br/>
+java.net<br/>
+java.nio<br/>
+java.nio.channels<br/>
+java.nio.channels.spi<br/>
+java.nio.charset<br/>
+java.nio.charset.spi<br/>
+java.nio.file<br/>
+java.nio.file.attribute<br/>
+java.nio.file.spi<br/>
+java.rmi<br/>
+java.rmi.activation<br/>
+java.rmi.dgc<br/>
+java.rmi.registry<br/>
+java.rmi.server<br/>
+java.security<br/>
+java.security.acl<br/>
+java.security.cert<br/>
+java.security.interfaces<br/>
+java.security.spec<br/>
+java.sql<br/>
+java.text<br/>
+java.text.spi<br/>
+java.util<br/>
+java.util.concurrent<br/>
+java.util.concurrent.atomic<br/>
+java.util.concurrent.locks<br/>
+java.util.jar<br/>
+java.util.logging<br/>
+java.util.prefs<br/>
+java.util.regex<br/>
+java.util.spi<br/>
+java.util.zip<br/>
+javax.accessibility<br/>
+javax.activation<br/>
+javax.activity<br/>
+javax.annotation<br/>
+javax.annotation.processing<br/>
+javax.crypto<br/>
+javax.crypto.interfaces<br/>
+javax.crypto.spec<br/>
+javax.imageio<br/>
+javax.imageio.event<br/>
+javax.imageio.metadata<br/>
+javax.imageio.plugins.bmp<br/>
+javax.imageio.plugins.jpeg<br/>
+javax.imageio.spi<br/>
+javax.imageio.stream<br/>
+javax.jws<br/>
+javax.jws.soap<br/>
+javax.lang.model<br/>
+javax.lang.model.element<br/>
+javax.lang.model.type<br/>
+javax.lang.model.util<br/>
+javax.management<br/>
+javax.management.loading<br/>
+javax.management.modelmbean<br/>
+javax.management.monitor<br/>
+javax.management.openmbean<br/>
+javax.management.relation<br/>
+javax.management.remote<br/>
+javax.management.remote.rmi<br/>
+javax.management.timer<br/>
+javax.naming<br/>
+javax.naming.directory<br/>
+javax.naming.event<br/>
+javax.naming.ldap<br/>
+javax.naming.spi<br/>
+javax.net<br/>
+javax.net.ssl<br/>
+javax.print<br/>
+javax.print.attribute<br/>
+javax.print.attribute.standard<br/>
+javax.print.event<br/>
+javax.rmi<br/>
+javax.rmi.CORBA<br/>
+javax.rmi.ssl<br/>
+javax.script<br/>
+javax.security.auth<br/>
+javax.security.auth.callback<br/>
+javax.security.auth.kerberos<br/>
+javax.security.auth.login<br/>
+javax.security.auth.spi<br/>
+javax.security.auth.x500<br/>
+javax.security.cert<br/>
+javax.security.sasl<br/>
+javax.sound.midi<br/>
+javax.sound.midi.spi<br/>
+javax.sound.sampled<br/>
+javax.sound.sampled.spi<br/>
+javax.sql<br/>
+javax.sql.rowset<br/>
+javax.sql.rowset.serial<br/>
+javax.sql.rowset.spi<br/>
+javax.swing<br/>
+javax.swing.border<br/>
+javax.swing.colorchooser<br/>
+javax.swing.event<br/>
+javax.swing.filechooser<br/>
+javax.swing.plaf<br/>
+javax.swing.plaf.basic<br/>
+javax.swing.plaf.metal<br/>
+javax.swing.plaf.multi<br/>
+javax.swing.plaf.nimbus<br/>
+javax.swing.plaf.synth<br/>
+javax.swing.table<br/>
+javax.swing.text<br/>
+javax.swing.text.html<br/>
+javax.swing.text.html.parser<br/>
+javax.swing.text.rtf<br/>
+javax.swing.tree<br/>
+javax.swing.undo<br/>
+javax.tools<br/>
+javax.transaction<br/>
+javax.transaction.xa<br/>
+javax.xml<br/>
+javax.xml.bind<br/>
+javax.xml.bind.annotation<br/>
+javax.xml.bind.annotation.adapters<br/>
+javax.xml.bind.attachment<br/>
+javax.xml.bind.helpers<br/>
+javax.xml.bind.util<br/>
+javax.xml.crypto<br/>
+javax.xml.crypto.dom<br/>
+javax.xml.crypto.dsig<br/>
+javax.xml.crypto.dsig.dom<br/>
+javax.xml.crypto.dsig.keyinfo<br/>
+javax.xml.crypto.dsig.spec<br/>
+javax.xml.datatype<br/>
+javax.xml.namespace<br/>
+javax.xml.parsers<br/>
+javax.xml.soap<br/>
+javax.xml.stream<br/>
+javax.xml.stream.events<br/>
+javax.xml.stream.util<br/>
+javax.xml.transform<br/>
+javax.xml.transform.dom<br/>
+javax.xml.transform.sax<br/>
+javax.xml.transform.stax<br/>
+javax.xml.transform.stream<br/>
+javax.xml.validation<br/>
+javax.xml.ws<br/>
+javax.xml.ws.handler<br/>
+javax.xml.ws.handler.soap<br/>
+javax.xml.ws.http<br/>
+javax.xml.ws.soap<br/>
+javax.xml.ws.spi<br/>
+javax.xml.ws.spi.http<br/>
+javax.xml.ws.wsaddressing<br/>
+javax.xml.xpath<br/>
+org.ietf.jgss<br/>
+org.omg.CORBA<br/>
+org.omg.CORBA_2_3<br/>
+org.omg.CORBA_2_3.portable<br/>
+org.omg.CORBA.DynAnyPackage<br/>
+org.omg.CORBA.ORBPackage<br/>
+org.omg.CORBA.portable<br/>
+org.omg.CORBA.TypeCodePackage<br/>
+org.omg.CosNaming<br/>
+org.omg.CosNaming.NamingContextExtPackage<br/>
+org.omg.CosNaming.NamingContextPackage<br/>
+org.omg.Dynamic<br/>
+org.omg.DynamicAny<br/>
+org.omg.DynamicAny.DynAnyFactoryPackage<br/>
+org.omg.DynamicAny.DynAnyPackage<br/>
+org.omg.IOP<br/>
+org.omg.IOP.CodecFactoryPackage<br/>
+org.omg.IOP.CodecPackage<br/>
+org.omg.Messaging<br/>
+org.omg.PortableInterceptor<br/>
+org.omg.PortableInterceptor.ORBInitInfoPackage<br/>
+org.omg.PortableServer<br/>
+org.omg.PortableServer.CurrentPackage<br/>
+org.omg.PortableServer.POAManagerPackage<br/>
+org.omg.PortableServer.POAPackage<br/>
+org.omg.PortableServer.portable<br/>
+org.omg.PortableServer.ServantLocatorPackage<br/>
+org.omg.SendingContext<br/>
+org.omg.stub.java.rmi<br/>
+org.w3c.dom<br/>
+org.w3c.dom.bootstrap<br/>
+org.w3c.dom.events<br/>
+org.w3c.dom.ls<br/>
+org.xml.sax<br/>
+org.xml.sax.ext<br/>
+org.xml.sax.helpers<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>com.qa.testscripts.TC_WorkingWithFrames_001@5acf93bb</td></tr>
+<tr>
+<td title='com.qa.testscripts.TC_WorkingWithFrames_001.frameByName()'><b>frameByName</b><br>Test class: com.qa.testscripts.TC_WorkingWithFrames_001<br/>
+<a href="#Output-597307412" onClick='toggleBox("Output-597307412", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-597307412" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-597307412">
+Overview (Java Platform SE 7 )<br/>
+Element is present<br/>
+Text present on the element is : Any<br/>
+The href value for the element is : https://docs.oracle.com/javase/7/docs/api/org/omg/CORBA/Any.html<br/>
+</div>
+</td>
+<td></td>
+<td>5</td>
+<td>com.qa.testscripts.TC_WorkingWithFrames_001@5acf93bb</td></tr>
+</table><p>
+</body>
+</html>

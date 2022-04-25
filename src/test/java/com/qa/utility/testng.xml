@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation Suite" thread-count="5" parallel="tests">
+
+	<listeners>
+		<listener class-name="com.qa.utility.Reporting"></listener>
+	</listeners>
+
+	<test thread-count="5" name="Functional Test - Amazon - Chrome">
+		<parameter name="Url" value="http://www.amazon.in/"></parameter>
+		<parameter name="Browser" value="Chrome"></parameter>
+		<classes>
+			<class name="com.qa.testscripts.TC_Amazon_002" />
+			<class name="com.qa.testscripts.TC_Amazon_003" />
+			<class name="com.qa.testscripts.TC_Amazon_004" />
+			<class name="com.qa.testscripts.TC_Amazon_006" />
+			
+		</classes>
+	</test>
+
+	<!-- <test thread-count="5" name="Functional Test - Amazon - Edge" parallel="classes"> 
+		<parameter name="Url" value="http://www.amazon.in/"></parameter> <parameter 
+		name="Browser" value="Edge"></parameter> <classes> <class name="com.qa.testscripts.TC_Amazon_002" 
+		/> <class name="com.qa.testscripts.TC_Amazon_003" /> <class name="com.qa.testscripts.TC_Amazon_004" 
+		/> </classes> </test> Test -->
+
+
+
+	<!--<test name="Functional Test - Drad & Drop"> <parameter name="Browser" 
+		value="Chrome"></parameter> <parameter name="Url" value="https://jqueryui.com/droppable/"></parameter> 
+		<classes> <class name="com.qa.testscripts.TC_DragandDrop_001"></class> </classes> 
+		</test> -->
+
+
+	<!-- <test name="Functional Test-Frames"> <parameter name="Browser" value="Chrome"></parameter> 
+		<parameter name="Url" value="https://docs.oracle.com/javase/7/docs/api/"></parameter> 
+		<classes> <class name="com.qa.testscripts.TC_WorkingWithFrames_001"></class> 
+		</classes> </test> -->
+
+
+	<!-- <test name="Functional Test- Multiple Windows"> <parameter name="Browser" 
+		value="Chrome"></parameter> <parameter name="Url" value="https://www.online.citibank.co.in/"></parameter> 
+		<classes> <class name="com.qa.testscripts.TC_WorkingWithMultipleWins_001"></class> 
+		</classes> </test> -->
+
+	<!-- <test name="Functional Test- PopUp"> <parameter name="Browser" value="Chrome"></parameter> 
+		<parameter name="Url" value="http://register.rediff.com/register/register.php?FormName=user_details"></parameter> 
+		<classes> <class name="com.qa.testscripts.TC_WorkingWithPopUp_001"></class> 
+		</classes> </test> -->
+</suite> <!-- Suite -->
