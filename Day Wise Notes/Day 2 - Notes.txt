@@ -1,0 +1,214 @@
+1. Page object model
+2. TestNG framework
+----------------------
+
+Page Object Model in Selenium is design pattern used to create Object Repository.
+
+Why to create an Object Repository?
+What is an Object Repository?
+How an Object Repository can be created?
+What are different class and methods used in creation of object repository?
+
+
+Object Repository is a centralized location to store the test object description / locator into a reference variable.
+
+As per the test automation guidelines, it is important to write the code with different artifacts to be reusable to one or more test scripts.
+
+When maintained in a centralized location, the artifacts can be reused to one or more test scripts.
+
+The test object description might change dynamically anytime in future. So it will be easy if maintained separately to apply the modifications.So when the test object description changes dynamically it can be updated in the centralized location.
+
+
+Create the pages that can accomodate the test objects and its description into a separate class.
+*******************************************************************************************
+TestNG : NextGeneration.
+
+It is a testing framework used along with Selenium for customizing the test code as per the test automation needs.
+
+B'coz, Selenium API alone is not enough to equip the code to a perfect test code.
+
+TestNG is an API that is inspired with JUnit.
+
+Junit is a java based unit testing framework used by the developer to carryout unit testing.
+
+TestNG is framework used as testing framework by the QA.
+
+By adopting TestNG, we will translate the Java Selenium code to a TestNG Selenium code.
+
+Why TestNG?
+
+As selenium being an open source tool do not have complete features to automate an application end to end.
+
+It is also important for QA to construct the automation framework as per the guidelines.
+
+What are the benefits using TestNG along with Selenium?
+
+1. Generate the HTML reports post execution where test execution status can be captured.
+2. Control the flow of execution
+3. Reuse the code and its components.
+4. Cross browser testing
+5. Parallel testing
+6. Test suite 
+7. Prioritize, grouping, enable / disable etc.
+8. Asserts : Checkpoints used to compare the expected values against the actual values.
+9. Parameterization : @Parameters & @DataProvider. (Single input & Multipl input parameterization)
+-------------------------------------------------------
+How to configure TestNG into Eclipse IDE
+https://testng.org/testng-eclipse-update-site
+How to configure TestNG into the Maven project
+------------------------------------------------------------
+How to incorporate the TestNG features into the test code
+
+Annotations in TestNG
+---------------------
+
+What is an annotation?
+
+Annotations are the pre-defined classes which can control the flow of execution.
+
+Always a method below annotation will run as per the predefined instructions from the library.
+
+always starts with '@' symbol.
+
+Only a non-static can be declared as annotation.
+
+categorized into 3 types:
+-------------------------
+
+1. Annotation for test fixtures
+2. Annotation for test case
+Annotation for parameterization
+
+
+Struture of test code in TestNG:
+--------------------------------
+
+Suite --> test(s) --> Class(s) --> Method(s)
+
+* In Testng Test suite can be created in a xml format. It has a predefined structure.
+--<*@BeforeSuite*>
+<suite name="Default suite" guice-stage="DEVELOPMENT">
+--<*@BeforeTest*>
+  <test thread-count="5" name="Default test" verbose="2">
+    <classes>
+		--<*@BeforeClass*>
+      <class name="com.qa.testscripts.TC_Amazon_002"/>
+		--<*AfterClass*>
+		--<*@BeforeClass*>
+      <class name="com.qa.testscripts.TC_Amazon_003"/>
+		--<*AfterClass*>
+    </classes>
+  </test> <!-- Default test -->
+--<*@AfterTest*>
+</suite> <!-- Default suite -->
+--<*AfterSuite*>
+            
+
+Methods can be categorized as :
+
+1. Annotation for test fixtures
+----------------------------------
+
+Method with some pre condition and post conditions
+
+	>> Methods to run before or after a Suite --> a method should be declared as @BeforeSuite & @AfterSuite >> The method below these annotations are expected to run before a <suite> and after a <suite>.
+
+	>> Methods to run before or after a test --> a method should be declared as @BeforeTest & @AfterTest >> The method below these annotations are expected to run before a <test> and after a <test>.
+
+
+	Methods to run before or after a class--> a method should be declared as @BeforeClass & @AfterClass >> The method below these annotations are expected to run before a <Class> and after a <Class>.
+
+	Methods to run before or after a testcase that is annotated @Test --> a method should be declared as @BeforeMethod & @AfterMethod >> The method below these annotations are expected to run before a @Test method and after @Test
+
+2. Annotation for test case
+----------------------------
+
+-- Method with the potential functionality under test is called as test case which need to be always annotated as @Test.
+
+** in a single class file we can have one or more methods declared as @Test.
+
+----------------------------------------------------------------------------------------
+
+Example : Internet Banking application
+
+Features : potential functionalities under test
+
+1. Fund Transfer
+2. Utility bill payment
+3. Creditcard bill payment
+
+Pre-requisites and post conditions
+
+Login()
+Logout()
+
+
+Login() --> FundTransfer --> Logout()
+Login() --> Utility Bill payment --> Logout()
+Login() --> Credit card Bill payment --> Logout()
+
+---------------------------------------------------------
+
+Assertions in TestNG:
+---------------------
+Checkpoint used to compare the expected values(hard coded) against the actual values(fetch at run session).
+If both are same, the test return passed else returns fail
+
+Different aspects can be compared based the different assert methods in TestNG.
+
+2 assert classes in TestNG
+
+1. Hard assert : Assert - class : If there is a mismatch the test fails and stops the execution in the line of assert.
+
+2. Soft assert : SoftAssert - Class : If there is a mismatch the test fails but doesn't stop the execution. it will continue the test till the end despite mismatches.
+
+
+
+1. Create a TestBase.java file with setUp() and tearDown() annotated as @BeforeClass and @AfterClass.
+2. Write the code to invoke the browser, initialize pages and the launch url in setup method
+3. write the code to close the browser in tearDown()
+4. TC_Google_001 should extend TestBase
+5. replate the public static void main() as non static method ex: public void searchItem(), and annotate it as @Test
+6. Create a testng.xml that can run TC_Google_001
+7. Create the <parameter> tag for Browser and URL in testng.xml file within the <test> tag
+8. use @Parameters annotation above @BeforeClass annotated in TestBase.Java and parse the string inputs of setUp() and replace the constants for Browser and URL.
+
+------------------------------------------------
+
+Parameterization :  It is a process of parsing the inputs to the code through a parameter / variable.
+
+Single input parameterization:
+	1. Reading the parameter value for xml file --> @Parameters
+	2. Read the value from the properties file
+
+Multiple input parameterization:
+	1. Create a method that can return the data in Object[][] and parsed to another method annotated as @Test --> @DataProvider
+	2. How can we source data to an object[][] by fetching it from Excel.
+
+
+
+
+1. Locate the Excel file and open that in a read mode --> FileInputStream class  from Java.io
+2. Should be loaded into another object as Excel Workboox --> XSSFWorkbook class from Apache poi
+3. We need reach the sheet in a work book --> getSheet(id /name) from XSSFWorkboox class that can return the reference of a sheet by id(int) / name(string) XSSFSheet
+4. Fetch the total no. of rows in sheet that is fetch using getLastRow() method from XSSFSheet class --> return all the rows in a sheets in the int format
+5. From each row we need to find the total no. of cell --> XSSFRow class that has a method getLastCell() --> returns in int.
+6. Generic method that can read the celldata from every row and each cell based on the index and return in the String format.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

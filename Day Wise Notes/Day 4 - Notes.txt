@@ -1,0 +1,48 @@
+3. Maintenance phase : The test automation project to be maintained in the remote repository like gitHub. where the other testing team / devop team can access the project from common share point.
+
+
+GitHub: It is a centralized repository to store the project deliverable and artifacts while co-odinating the work remotely.
+
+Open source Version control and Remote repository software, that will enable to maintain the history of project artifacts and the retain the project structure, allow the team to access the deliverables for further development.
+
+What is version control system?
+
+It is a process of maintain the history of the documents / project deliverables while ever there are modification / changes impacted on the relavant documnet. We can traverse through the history when needed in the future.
+
+git : local repository
+gitHub : remote reppsitory
+
+
+TL:
+----
+1. Create the project structure in the local system
+2. Add the required common files into the project structure.
+3. Create the project repository in the gitHub
+4. push the project from the local system to the github location
+5. add the collaborators.
+---
+Once the project is pushed after the step number 4 done by QA,
+
+6. Review the files added by QA on the branch and approve the changes further merging into master.
+
+
+QA:
+---
+1. Will receive the email notification to access the project in gitHub
+2. clone the project from gitHUb to the local PC fo further modification / changes
+** The colloborator should maintain a discipline to retain the project as is created by the TL.
+3. Add the new files or the code for the respective modules into the cloned the project
+4. push the project to the TL respository for review on the separate branch
+5. Create the PR (pull request) TL will be notified for review and merging
+
+1. Have an account with gitHub repository.(open source)
+2. git should be installed in the local system
+3. Create the token in the github
+
+Workflow:
+
+Project and folder in the local pc --> initialize as git folder --> add all the content of the folder from untracked to tracked state (staging) --> Commit (save the changes) --> push them to remote repository.
+
+
+
+

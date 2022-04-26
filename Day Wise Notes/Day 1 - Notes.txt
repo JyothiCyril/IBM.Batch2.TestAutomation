@@ -1,0 +1,500 @@
+Software Testing : It is process of validating an application as per the implicit and explicit client requirements for positive and negative test condition.
+
+* Is the application working as per clients requirement
+* Is the application working correctly for valid input and expected conditions as well as invalid inputs and unexpected conditions. --> Positive and Negative testing.
+* Ensure the application is defect free and fit to release.
+
+* To prove the application is defect free, there are different techniques that are adopted as process of software engineering to avoid the defect leakages at the deployment level.
+
+Dynamic Testing : Where the developed build is exercised several times to find and fix the defects in a prescribed approach.
+
+Categorized into 2 techniques:
+
+White Box Testing : The developed software is tested by the developer from the source code level to find and fix the defects sooner the possible.
+
+Unit Testing : small / independent components are tested individually for the syntax and logics. This is done soon after the units are developed by the programmer. --> Manually / Automated (Junit / Nunit etc.)
+
+** The units will be integrated to a executable (exe /jar/war/ear etc.) 
+		--> Non-incremental approach : In traditional / conventional development model, non-incremental approach is exercised a lot, where the units are developed first and tested indepedently and later integrated to a build.
+
+		--> Incremental approach : Few conventional model & Agile Models, incremental approach is exercised a lot. where, the units developed are tested independently and integrated to the other immediately to check if there is changes in its behaviour after integration.
+
+Integration Testing : Check the flow / connection between one or more units. Objective : Adding new units to other existing, the application is expected to work as it is intended.
+
+** Done By Developers
+** This is done as part of development phase.
+
+
+Black Box Testing : done by the Tester(QA) and Designated Businesss User
+
+* The application is tested from the front end (GUI) without exercising the internal structure / code. The functionality and behaviour of an application is tested from front end.
+
+Categorized into :
+
+System Testing : Done by Tester / QA where the whole system(application) is tested for functional and non-functional parameters.
+
+Objective : is ensure the product built is complete and correct.
+
+Several times / Multiple testing are conducted to improve the accuracy and the quality of the product.
+
+* Test cycles : Smoke Testing, Sanity Testing, Retesting, Regressional Testing, Compatiablity Testing, Repeated input testing ..
+
+Functional Testing: The independent features / functionalities are tested for its behaviour based on certain combinations of inputs ( Valid / Invalid) --> Positive and Negative testing.
+	--> The application is tested for Scenario that has one or more specifications.
+
+Non Functional testing : Usablity testing, performance testing, load testing, stress testing, security testing etc. --> If the product is fit to be delivered as per the business needs and market standards.
+
+2 Ways: Manually / Automation
+
+Manual Testing : The application features are tested by the qualified test engineer by repeating the actions / sequences of actions manually on the AUT (Application Under Test) and make observation on its behaviour if it is in par with the requirements.
+
+Automation Testing : The application under test is tested by another application(software : automation tool)) to validate its features. Automation tool, uses the well designed code to test the application by performing the actions on the AUT(application under Test).
+
+** Automation tool performs the user events on the application to validate the outcomes.
+
+Test Activities: : various task performed by the group of testers to initiate a systematic test process.
+
+1. Test planning : Planning the test activies and design the strategy/ appraoch for testing application in a planned appraoch. --> TL / TM / QA
+
+2. Test designing : QA : Identify the testable requriements and write the test cases for each scenario.
+
+3. Test coding : The selected test case should be automated, where QA will design the test code as per the test case / scenario.
+
+4. Test execution : Manually / Automation ** Not everything can be done manually and not everything can be automated. * Preferred conditions to test a product either manually or by automation or both.
+
+5. Test evaluation : is the enough amount of testing is done or not is carefully evaluated and metrics to be calculated.
+
+User Acceptance Testing : Done by end user / clients, The software developed is executed by the user to check if it is working as per their requirement. Once the client/ end user is satisfied with the product will released further. -->Alpha & Bet testing.
+
+******************************************************************************************
+
+1. Why Automation Testing
+
+Funtional Needs:
+
+	Retesting : where certain group of test case as exercised several times till the defects are fixed completely.
+
+	Regression Testing : Is done when the existing product is modified or added with new features / functionalities. To check if the product the existing product remains unchange whe the code is modified / new code is introduced to the existing build.
+
+	Compatiablity Testing : A software developed is exercised on multiple platform to check its behaviour.  Application behaviour is tested on varying test environment. Cross Browser testing, Cross Platform etc.
+
+	Repeated input testing : a scenario is tested for one or more combinations of inputs.
+
+Non-functional needs:
+
+	Performance Testing : Only automated approach. It is process of checking the performance of an application by calculating response time for multiple user ( virtual user).
+
+2. What is Automation Testing?
+
+
+It is a process of testing a software (Application under test) using another software ( Automation Tool).
+
+It is process of recording and playing back the user events to validate the application for positive and negative test conditions.
+
+recording : designing the test code
+playing back : executing the test code
+User events : actions / set of actions to be performed by the tool on AUT.
+
+3. Different Test automation tools avaialable : Categorized based on technical aspects (Type of testing) & Business aspects ( Open source / Commericial).
+
+Functional Testing Tools:
+
+ Selenium (open source), UFT, SilkTest, RFT, ToSCA.
+
+Non Functional Testing Tools:
+ JMeter (open source), LR , Silk Performer, RPT etc.
+
+Test Management Tools
+ 
+	JIRA , ALM etc.
+
+Mobile Testing Tools 
+	Appium
+
+API Testing Tools
+	SoapUI( free & Licensed) , Rest-assured (open source), Postmann
+
+**********************************************************************************************
+4. Test automation using Selenium.
+
+
+Selenium is an open sources BBT automation tool used for automating the web application.
+
+The tool is used to check the functionality of web application from front end.
+
+Developed by ThoughtWork Inc.
+
+History of Selenium --> http://www.selenium.dev/
+
+* Multi platform, Multi browser and Multi language tool
+
+Components of Selenium :
+
+1. Selenium IDE (Integrated Development Environment) : Plugin / add on with Firefox / Chrome / edge --> The code can be created and executed only on the respective browser.
+2. WebDriver : used for Cross browser testing, regression testing and so on.
+3. Selenium GRID : used for cross platform testing, where the webdriver code can be exercised on different VDI's Cross platform testing.
+
+*******************************************************************************************
+
+Introduction to WebDriver:
+
+It is a component in Selenium used for cross browser testing.
+
+Functionality of a web application can be tested on different browsers.
+
+WebDriver can be downlaoded in the self-contained library based on its programing language
+
+jar / dll.
+
+WebDriver component do not have any physical IDE for the test code develoment and executions.
+
+As it comes as a library we need to take support of IDE like Eclipse / STS / IntelliJ
+
+How to configure WebDriver into Eclipse IDE
+
+1. Java Project and include the selenium library
+2. Maven project and include the selenium library in the form of dependencies.
+
+
+1. Jdk installed ( 8 to 11) --> jdk 1.8 version
+2. Eclipse IDE --> oxygen / Java EE developers.
+
+*****************************************************************************************
+
+Test Automation Process / Framework : It is a systematical approach of automating an application step by step as per the test scenario and test automation guidelines / best practices.
+
+categorized into 3 phases:
+
+1. Implementation phase : Write the code as per the test automation needs / scenario
+2. Execution phase : Executed against the application on different platform. scheduling the test execution 
+3. Maintenance phase : Maintain hte test artifacts and version control to be done on remote locations (gitHub / SubVersion etc) while the activities are performed by different people collaboratively when connect remotely.
+************************************************************************************
+
+Test automation activities : Test designing + Test Execution + Test Maintenance.
+
+Test designing : Write the test code : translating the test case into a test code.
+Test Execution : execute the test code
+Test maintenance : maintain the test code in remote repository location.
+
+
+Test case : it is documents that consists of step by step instruction to repeate the user requirement for positive and negative test condition.
+
+Test case has steps to repeat for exercising each scenario.
+
+every step should be translated to a test code.
+
+Test scenario:
+
+1. Open the browser
+2. Launch the URL for amazon.in --> web application loaded
+3. Select Books as category
+4. Type da vinci code in search text field
+5. Click on the magnifier button
+6. Check if all the items related to search term are loaded
+7. Close the browser
+
+Write code to:
+
+Launch the Browser --> Enter the Url (web page) --> reach elements on the web page --> perform the user actions on the element --> observe results.
+
+
+Structure of Test Code: components of test code.
+-----------------------
+
+It is a lines of code which can perform some sequence of action.
+
+Test code is collection of Test Object, Test Object Description, Methods , Test Data & Expected values.
+
+Test Object : Object under test (Element / WebElement)
+Test Object description : recognized the element / reach the web element using locators
+Method : Actions / set of actions to be perform : user events : click,select,type etc.
+Test data : Inputs (valid / invalid)
+Expected value : What results the tools has to observe at the time of execution.
+
+Test Automation guidelines : It is discipline followed while automating an application.
+
+Test automation artifacts meets the below parameter / best practices for effective and efficient test automation development.
+
+1. Well organized
+2. Reusable : code / component of test code should reusable.
+3. Optimized : minimum lines of code to acheive the objective.
+4. Modular : well structured
+5. Maintained 
+
+
+1. Implementation phase : writing code.
+
+	step 1 : Create the GUI reference : For every element present on the webpage, there need to be a unique locator / physical description. This will teach automation tool to reach / locate the element uniquely at the time of execution.
+			1. Locators in Selenium
+			2. Page Object Model 
+
+	step 2 : create the test script : write the test code as per the test scenario / test case
+			1.  Different types of classes in Selenium WebDriver API 
+
+	step 3 : Customize the test script : enhance the test code as per the test automation needs and guidelines.
+
+		* Equipping the test code as per the test automation needs and to strictly follow the test automation guidelines.
+
+		reasons : Test scenarion to be tested for multiple input by fetching inputs from external sources like excel / properties/database/ csv etc (Repeated input testing). Cross browser testing, Automatically handle time delay exceptions between the tool and the application. Code to be reusable / optimized code.
+
+Along with Selenium webdriver, the below API are used for automating an application. 
+
+		TestNG + Java + Apache Poi + common io+ extent report etc.
+
+* Each API will serve different purpose / cause of test automation needs.
+
+	step 4 : Debug test script : check the test code for any syntax / logical error.
+* Errors in the code is not considered as errors in the application.
+* QA is expected write the code in a tester direction which can test the application for the expected and the actual outcomes.
+* the test code should be written to find the defects in the application.
+** Errors in the code cannot prove that there are errors in the application.
+
+2. Execution phase : The code is executed against the application
+		1. Run the test code individually
+		2. Run the test code in the test suite (collection of test cases) --> testng.xml
+		3. Run the test suite using apache maven as pom.xml (testng.xml file will be executed from pom.xml)
+		4. Run the test suite on the CLI 
+		5. Run the test suite from Jenkins (CICD tool)
+
+3. Maintenance phase : The test automation project to be maintained in the remote repository like gitHub. where the other testing team / devop team can access the project from common share point.
+
+Topics : 
+
+1. Selenium
+2. TestNG
+3. ExtentReport
+4. ApacheMaven
+5. GitHub
+6. Jenkins
+***********************************************************************
+
+WebDriver architecture to invoke the broswer from Eclipse IDE.
+
+3 components: if we're the test code is written in python / c# / Ruby etc.
+
+	1. Selenium client binding (python,c#)
+	2. Selenium standalone server (.jar)
+	3. Driver binaries (exe / webdrivermanager)
+
+** Write the code in any language is further translated to java with the support of selenium standalone server.jar
+
+
+if the code is written using java client binding
+	
+	1. Selenium client binding
+	2. Driver binaries (exe / webdrivermanager)
+
+selenium clent binding has in-built server for further traslation of code
+
+
+Driver binaries : Supporting executable, will be used to run the selenium code on the respective browser by invoking from local system.
+To execute the selenium code on the browser controlled by test automation tool, selenium used JSON Wire protocol.
+
+JSON : Java Script Object Notation.
+
+
+Key : webdriver.chrome.driver
+value : path of driver executable / binary in the local system
+
+webdriver.edge.driver
+webdriver.gecko.driver
+webdriver.ie.driver
+
+WebDriverManager.chromedriver.setup()
+
+
+*********************************************************************************************
+
+Class diagram for WebDriver interface:
+-------------------------------------
+
+
+SearchContext Interface is the super most class that has 2 abstract methods : findElement() & findElements()
+
+
+WebDriver interface extends SearchContext interface which had totally 13 abstract methods 
+
+get(), getTitle(), getCurrentURL(), getPageSource(), getWindowHandle(), getWindowHandles(), switchTo(), navigate(), manage(), close(), quit(), findElement() & findElements() 
+
+
+RemoteWebDriver Interface implementd WebDriver interface, Java Script Interface, Takesscreenshot interface and lot many.
+
+ChromeDriver, EdgeDriver, FirefoxDriver, InternetExplorerDriver implement RemoteWebDriverInterface
+
+
+When a driver object is created and calls any of the browser instance class
+
+Ex: 
+
+ChromeDriver driver = new ChromeDriver();
+
+driver as a variable is pool with different implemented methods of all its super class. ( RemoteWebDriver, JavaScriptInterface,TakeScreenshot , WebDriver, SearchContext etc.)
+
+** Selenium recommends to upcast the driver variable to its super class only WebDriver.
+
+RemoteWebDriver driver = new ChromeDriver(); --> all the implemented method of remote webdriver class is pooled into the driver variable which may impact the performance the driver variable within the code.
+
+
+*** WebDriver driver = new ChromeDriver(); // best recommended
+SearchContext driver = new ChromeDriver(); // is not recommended
+
+As SearchContext interface has only 2 abstract methods findElement() & findElements()
+** We will not be able to reach the WebElements without reaching the browser.
+
+The method to launch the URL on the browser is available only in WebDriver interface.
+
+
+
+WebDriver driver = new ChromeDriver();
+WebDriver driver = new EdgeDriver();
+WebDriver driver = new FirefoxDriver();
+WebDriver driver = new InternetExplorerDriver();
+******************************************************************************************
+Abstract Methods of WebDriver Interface:
+----------------------------------------
+
+
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+		driver.get("https://www.amazon.in/"); // load the url on the browser instance .
+		// loc to test the functionality should be written after the get() and before the close()
+		driver.manage().window().maximize();
+		
+		System.out.println(driver.getTitle()); // fetch the title of the page and returns the string format.
+		
+		System.out.println(driver.getCurrentUrl()); // fetch the url at the run session. return string
+		
+		System.out.println(driver.getWindowHandle()); // Window ID of the current browser instance. return String
+		
+		//driver.getWindowHandles(); // returns the window id of all the window / tab opened on the current browser.
+		
+		//driver.switchTo().window(window id); // one tab to other tab
+		//driver.switchTo().alert(); // switch to alert window
+		//driver.switchTo().frame(); // switch to frame with in a page with by index/name/WebElemnt etc
+		driver.navigate().to("https://www.google.com/");
+		Thread.sleep(2000);
+		driver.navigate().back();
+		Thread.sleep(2000);
+		driver.navigate().forward();
+		Thread.sleep(2000);	
+		
+	//	driver.findElement(locator); // reach the element matching a locator on the webpage. return first match element based on locator
+	//	driver.findElements(locatos); // fetch all the matching element present on the web page.
+		
+		
+		driver.close(); // close the browser
+
+**********************************************************************************************
+Working with WebElement and its locators :
+-----------------------------------------
+
+WebElement : Element present on the web page
+
+WebElement:
+----------
+Type
+Locator --> Type of locator & By class
+Action / method --> WebElement Interface.
+
+Select Books as category
+
+Type : Select / drop down list
+Locator : --
+Action : select a value
+
+Type da vinci code in search text field
+Type: input field
+Locator : 
+Action : type --> sendKeys()
+
+
+On the Driver where the webpage is loaded, we need reach the WebElement using a locator
+
+
+Object Identification using Locators
+------------------------------------
+
+It is a process of identifying the Webelements at the time of execution using some unique description called Locators.
+
+The locators are the predefined methods of Selenium library that can be accessed through By class.
+
+By Class has different abstract method with the different options to locate an element on the web page.
+
+Every element present on the page will have wide varieties of attributes / properties that are designed by the developers.
+
+Using some of the unique properties will help the tool reach the element for further interactions.
+** any locator to choose in the code, should unique in scope and stable by nature
+
+Categorized into 2 types:
+
+1. Attribute based locators : HTML code of the web page
+		
+	1. HTML ID : 1st priority : Unique and stable : Speed of identification is much faster
+	2. Name : 2 nd priority : ** If the name attribute changes dynamically, it can't be used for identification.
+	3. Class Name : Last priority : One or more element can have same class name. ** If the value of the class name has a space cannot be used for identification
+	4. Link Text : 3rd priority : Text present on the link * only on the element of type <a> tag
+	5. Partial Link Text : partial text present on the link.
+	6. TagName : One or more element based the type of element . tagname are enclosed between "<a>"<input>, <button> etc..
+
+** Hyper links will not have all the attributes.
+2. Structure based locators : Derived based structure of the page. Alternative locating mechanism chosen when attribute based properties are not sufficient.
+	1. Xpath : 4th priority : it is an experession or a syntax. which is designed to be an address of element based on its position on the webpage.
+		Abs xpath : Full address of an element from the root of the HTML page <html ..>
+		Rel xpath : Shortest path of an element address it is reach directly from the descendents.
+
+		xpath by attribute :
+
+			//tagname[@attributename= 'attributevalue']
+
+	2. Css : Get the element reference by its style/ appearance.
+
+
+The above locators can either return single element or group of element.
+
+findElement () or findElements()
+
+Search Text field:
+
+Html code:
+
+<input type="text" id="twotabsearchtextbox" value="" name="field-keywords" autocomplete="off" placeholder="" class="nav-input nav-progressive-attribute" dir="auto" tabindex="0" aria-label="Search">
+
+Locators:
+
+
+
+
+
+
+
+<span class="a-size-medium a-color-base a-text-normal">The Count of Monte Cristo</span>
+<span class="a-size-medium a-color-base a-text-normal">The Hobbit &amp; The Lord of the Rings Boxed Set</span>
+<span class="a-size-medium a-color-base a-text-normal">The Da Vinci Code 10th Anniversary Edition</span>
+<span class="a-size-medium a-color-base a-text-normal">World’s Greatest Classics (Box Set of 4 Books)</span>
+
+
+//span[@class='a-size-medium a-color-base a-text-normal']
+
+Case Study:
+-----------
+
+1. Open the browser
+2. Launch URL --> google.com
+3. Type automation testing in the search text field
+4. get all the items displayed in the auto suggest field
+5. Submit the input
+6. Check the title has the search term
+7. close the browser.
+
+
+
+
+
+
+
+
+
+
+
+

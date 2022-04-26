@@ -1,0 +1,103 @@
+ExtentReports
+Working Actions class
+Working with JavaScriptExecutor
+Working with TakesScreenshot 
+Working with Multiple windows
+Working with Frames
+Working with popup
+**************************************************************
+
+ExtentReports
+-------------
+
+Java based API used along with selenium and testng for generating the crystal and maintain the test results post execution
+
+* Selenium do not have an in-built mechanism to generate the test results
+* TestNG reports generated gets appended on every test execution.
+
+Open Source & Professional (Licensed)
+
+1. Generate the HTML report
+2. Pie graph
+3. Dashboard for overall test summary
+4. Add the screenshots to the html report, if the test is failed.
+----------------------
+
+
+Configure on How and Where the html report should be created. --> HtmlReporter
+Loaded as ExtentReport --> Configure
+
+----------------------------------------------------------------
+
+Case Study:
+
+1. Create NewTourLogin class that extends TestBase (To open browser, launch URL & Configure the properties file)
+2. Launch URL https://demo.guru99.com/test/newtours/
+3. Create credentials.properties file under com.qa.testdata folder and store username and password.username=mercury password=mercury
+4. write the code in NewTourLogin class for Login functionality that can read the username and password from credentials.properties file
+5. Check if the user login is successful
+
+*****************************************************
+
+Run testng.xml file from pom.xml file Eclipse IDE or Apache Maven
+
+Why to run testng.xml file from pom.xml?
+
+Execution of test automation code will be triggered on the Jenkins platform where the devops engineer will pull the code while doing the CICD(continous integration and continuous deployment)
+
+CICD is a technical agile : It is an automated approach for integrating the units and deploying the integrated build on different platfor.
+
+Devops engineer will pipeline different tools for performing CICD activity.
+
+
+** Equip the test automation project to be executed on the Jenkins platform
+
+While the Jenkins platform will run the project in the Maven style.
+
+Maven is a build management used by the developers for systematical build developement
+
+Maven project is used by the QA while working with selenium to maintain the uniformity of creating the project while working with other colloborators/ team members.
+
+pom.xml --> heart of maven project used to run the other test suite (testng.xml) file
+
+Configure the required plug - in and API into pom.xml file to run testng.xml file.
+
+Plugin - sure-fire plugin : is test plug in used to run the unit test using Junit.
+
+we will the sure-fire plugin to trigger the test execution / test code that is using TestNG framework.
+* To run the test code with the surefire plugin, the code should available only under src/test/java folder.
+* we need the support of TestNG API should be configured into pom.xml file.
+* Define the path of testng.xml file under configurations of sure-fire plugin.
+* run the pom.xml file using maven commands. --> mvn test ( running the life till the src/test/java) or mvn clean test (the previous execution reports will be clean and run the test a fresh)
+
+2. Execution phase : The code is executed against the application
+		1. Run the test code individually
+		2. Run the test code in the test suite (collection of test cases) --> testng.xml
+		3. Run the test suite using apache maven as pom.xml (testng.xml file will be executed from pom.xml)
+		4. Run the test suite on the CLI 
+		5. Run the test suite from Jenkins (CICD tool)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
